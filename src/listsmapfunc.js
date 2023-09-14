@@ -1,3 +1,5 @@
+/*
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -15,13 +17,18 @@ const books = [
   },
 ];
 
+const names = ["tom", "eliza", "chalize", "jane", "maja"];
+
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
+console.log(newNames);
+
 const Booklist = () => {
   return (
     <section className="booklist">
-      {books.map((book) => {
-        console.log(book);
-        const { img, title, author } = book;
-        return <Book img={img} title={title} author={author} />;
+      {names.map((name) => {
+        return <h1>{name}</h1>;
       })}
     </section>
   );
@@ -53,8 +60,11 @@ const Book = (props) => {
   );
 };
 
-*/
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Booklist />);
+
+
+*/
