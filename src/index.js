@@ -28,7 +28,10 @@ const Booklist = () => {
         author={firstBook.author}
         title={firstBook.title}
         img={firstBook.img}
-      />
+      >
+        <p>DUMMY TEXT TESTING THIS CHILDREN PROP</p>
+        <button>click meeee</button>
+      </Book>
       <Book
         author={secondBook.author}
         title={secondBook.title}
@@ -38,16 +41,33 @@ const Booklist = () => {
   );
 };
 
-const Book = (props) => {
-  console.log(props);
+const Book = ({ img, title, author, children }) => {
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author}</h4>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+      {children}
     </article>
   );
 };
+
+/* i prefer this version below, 2 different ways of setting up props
+
+const Book = (props) => {
+  const { img, title, author, children } = props;
+  console.log(props);
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+      {children}
+    </article>
+  );
+};
+
+*/
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
