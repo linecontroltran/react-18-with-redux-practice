@@ -3,10 +3,17 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-const author = "Walter Isaacson";
-const title = "Elon Musk";
-const img = "./images/book1.jpg";
+const firstBook = {
+  author: "Walter Isaacson",
+  title: "Elon Musk",
+  img: "./images/book1.jpg",
+};
 
+const secondBook = {
+  author: "Arthur C. Brooks, And Oprah",
+  title: "Build the Life You Want: The Art and Science of Getting Happier",
+  img: "./images/book2.jpg",
+};
 //paramters
 const someFunc = (param1, param2) => {
   console.log(param1, param2);
@@ -17,9 +24,16 @@ someFunc("job", "developer");
 const Booklist = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 };
