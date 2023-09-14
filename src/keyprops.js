@@ -1,3 +1,5 @@
+/*
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -71,8 +73,9 @@ but it is not prefered,
 it only works for lists that never change
 
 
-*/
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Booklist />);
+/*
