@@ -1,33 +1,44 @@
+/*
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-const books = [
-  {
-    author: "Walter Isaacson",
-    title: "Elon Musk",
-    img: "./images/book1.jpg",
-  },
-  {
-    author: "Arthur C. Brooks, And Oprah",
-    title: "Build the Life You Want: The Art and Science of Getting Happier",
-    img: "./images/book2.jpg",
-  },
-];
 
-const names = ["tom", "eliza", "chalize", "jane", "maja"];
+const firstBook = {
+  author: "Walter Isaacson",
+  title: "Elon Musk",
+  img: "./images/book1.jpg",
+};
 
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-console.log(newNames);
+const secondBook = {
+  author: "Arthur C. Brooks, And Oprah",
+  title: "Build the Life You Want: The Art and Science of Getting Happier",
+  img: "./images/book2.jpg",
+};
+//paramters
+const someFunc = (param1, param2) => {
+  console.log(param1, param2);
+};
+//arguments
+someFunc("job", "developer");
 
 const Booklist = () => {
   return (
     <section className="booklist">
-      {names.map((name) => {
-        return <h1>{name}</h1>;
-      })}
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      >
+        <p>DUMMY TEXT TESTING THIS CHILDREN PROP</p>
+        <button>click meeee</button>
+      </Book>
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 };
@@ -58,8 +69,10 @@ const Book = (props) => {
   );
 };
 
-*/
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Booklist />);
+
+*/
