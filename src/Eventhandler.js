@@ -1,3 +1,5 @@
+/*
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -47,6 +49,7 @@ const EventExamples = () => {
 
   return (
     <section>
+        
       <form onSubmit={handleFormSubmission}>
         <h2>typical form</h2>
         <input
@@ -108,10 +111,12 @@ but it is not prefered,
 it only works for lists that never change
 
 
-*/
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Booklist />);
 
 //adding a line here to test this shit
+
+*/
