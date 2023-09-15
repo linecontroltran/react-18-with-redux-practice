@@ -8,7 +8,7 @@ import Book from "./Book";
 const Booklist = () => {
   return (
     <>
-      <h1>Amazon Best Sellers</h1>
+      <h1>Tom Tran's -- Amazon Best Sellers</h1>
 
       <section className="booklist">
         {books.map((book, index) => {
